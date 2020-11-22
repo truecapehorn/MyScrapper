@@ -57,7 +57,7 @@ url2 = 'https://kross.eu/pl/rowery/szosowe/gravel/esker-4-0-zielony-czarny-polys
 url3 = 'https://www.merida-bikes.com/pl-pl/bike/667/silex-400'
 url4 = 'https://rower.com.pl/merida-silex-400--2079478'
 url5 = 'http://www.megastart.pl/rowery/turystyczne/silex/107-silex-400'
-
+url6 = 'https://www.romet.pl/Rower,ASPRE_2,10,773,774,15410,2020.html'
 
 
 cena1=parase(url1,"span","id","product-price-78")
@@ -65,6 +65,7 @@ cena2=parase(url2,"div","class","a-price")
 cena3=parase(url3,"span","class","price")
 cena4=parase(url4,"span","class","base-price")
 cena5=parase(url5,"span","class","price")
+# cena6= parase(url6,"span","class","price")
 
 dane={
     "cena1":{"price":cena1,"url":url1},
@@ -72,5 +73,7 @@ dane={
     "cena3":{"price":cena3,"url":url3},
     "cena4":{"price":cena4,"url":url4},
     "cena5":{"price":cena5,"url":url5},
-      }
+    # "cena6": {"price": cena6, "url": url6},
+
+}
 check_price(dane)
