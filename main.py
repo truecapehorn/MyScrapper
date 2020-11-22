@@ -35,26 +35,37 @@ def check_price(price_float):
 
 # check_price(price_float)
 
-headers = {'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:70.0) Gecko/20100101 Firefox/70.0'}
+def price_preparation(price):
+    price_number = re.sub("[\n\t\s]*", "", price)  # usuniecie bialych znakow
+    price_number = re.sub(",", ".", price_number)
+    price_number = re.split("[zpPZUuEe]", price_number)[0]
+    return float(price_number)
+
+
+def parase(url,container,selectors,selec_name):
+    headers = {'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:70.0) Gecko/20100101 Firefox/70.0'}
+
+    try:
+        page = requests.get(url, headers=headers)
+        soup = BeautifulSoup(page.content, 'html.parser')
+        price = soup.find(container, {selectors: selec_name})
+        price_number = price_preparation(price.text)
+        return print(f"Cena w {url}: - {price_number} zł")
+
+    except Exception as e:
+        print(url, e)
+
 
 url1 = 'https://cumulus.equipment/pl_pl/spiwory/quilty-komfortery.html'
 url2 = 'https://kross.eu/pl/rowery/szosowe/gravel/esker-4-0-zielony-czarny-polysk'
 url3 = 'https://www.merida-bikes.com/pl-pl/bike/667/silex-400'
 
-for url in [url1, url2, url3]:
-    try:
-        page = requests.get(url, headers = headers)
-        soup = BeautifulSoup(page.content, 'html.parser')
-        if url == url1:
-            price = soup.find("span", {"id": "product-price-78"})
-        elif url == url2:
-            price = soup.find("div", {"class": 'a-price'})
-        elif url == url3:
-            price = soup.find("span", {"class": 'price'})
 
-        price_number = re.sub("[\n\t\s]+", "", price.text)  # usuniecie bialych znakow
-        price_number = price_number.replace(",", ".").split("z")[0]    # tylko cena
-        print(f"Cena w {url}: - {float(price_number)} zł")
 
-    except Exception as e:
-        print(url, e)
+parase(url1,"span","id","product-price-78")
+parase(url2,"div","class","a-price")
+parase(url3,"span","class","price")
+
+
+test=price_preparation("1234,85")
+print(test)
