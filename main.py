@@ -26,7 +26,7 @@ def check_price(prices):
         body=body+b
     print(body)
 
-    # send_email(body)
+    send_email(body)
 
 
 
