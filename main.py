@@ -18,7 +18,6 @@ def send_email(body):
         print("Problem z wyslaniem meila: {}".format(e))
 
 
-
 def prepare_mail(prices):
     body=make_template(prices)
     send_email(body)
