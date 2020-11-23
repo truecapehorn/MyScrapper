@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 import re
 import yagmail
 import os
+from template import make_template
 
 email = os.environ.get('EMAIL_USER2')
 password = os.environ.get("EMAIL_PASSWORD2")
@@ -10,7 +11,6 @@ password = os.environ.get("EMAIL_PASSWORD2")
 def send_email(body):
     receiver = 'jablonski.norbert@gmail.com'
     try:
-
         yag = yagmail.SMTP(user=email,password=password)
         yag.send(to=receiver, subject="Alert cenowy", contents=body, )
         print("Mail wysłany")
@@ -19,16 +19,9 @@ def send_email(body):
 
 
 
-def check_price(prices):
-    body=""
-    for k,v in prices.items():
-        b=f"url= {v['url']} , cena = {v['price']} zł.\n"
-        body=body+b
-    print(body)
-
+def prepare_mail(prices):
+    body=make_template(prices)
     send_email(body)
-
-
 
 
 def price_preparation(price):
@@ -67,13 +60,12 @@ cena4=parase(url4,"span","class","base-price")
 cena5=parase(url5,"span","class","price")
 # cena6= parase(url6,"span","class","price")
 
-dane={
-    "cena1":{"price":cena1,"url":url1},
-    "cena2":{"price":cena2,"url":url2},
-    "cena3":{"price":cena3,"url":url3},
-    "cena4":{"price":cena4,"url":url4},
-    "cena5":{"price":cena5,"url":url5},
-    # "cena6": {"price": cena6, "url": url6},
+dane=[
+    {"price": cena1, "url": url1},
+    {"price": cena2, "url": url2},
+    {"price": cena3, "url": url3},
+    {"price": cena4, "url": url4},
+    {"price": cena5, "url": url5},
+]
 
-}
-check_price(dane)
+prepare_mail(dane)

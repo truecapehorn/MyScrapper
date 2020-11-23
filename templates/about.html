@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title%}Alert cenowy{% endblock %}
+{% block content %}
+    <h1>Alert Cenowy</h1>
+    <p>
+       {% for cont in content %}
+        URL: {{ cont.url }} ; Cena: {{ cont.price }}
+        {% endfor %}
+    </p>
+{% endblock %}
