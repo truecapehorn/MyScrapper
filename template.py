@@ -11,3 +11,4 @@ def make_template(content):
     output = template.render(content=content)
     print(output)
     return output
+
