@@ -8,10 +8,11 @@ from template import make_template
 email = os.environ.get('EMAIL_USER2')
 password = os.environ.get("EMAIL_PASSWORD2")
 
+
 def send_email(body):
     receiver = 'jablonski.norbert@gmail.com'
     try:
-        yag = yagmail.SMTP(user=email,password=password)
+        yag = yagmail.SMTP(user=email, password=password)
         yag.send(to=receiver, subject="Alert cenowy", contents=body, )
         print("Mail wysłany")
     except Exception as e:
@@ -19,7 +20,7 @@ def send_email(body):
 
 
 def prepare_mail(prices):
-    body=make_template(prices)
+    body = make_template(prices)
     send_email(body)
 
 
@@ -30,7 +31,7 @@ def price_preparation(price):
     return float(price_number)
 
 
-def parase(url,container,selectors,selec_name):
+def parase(url, container, selectors, selec_name):
     headers = {'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:70.0) Gecko/20100101 Firefox/70.0'}
 
     try:
@@ -51,15 +52,14 @@ url4 = 'https://rower.com.pl/merida-silex-400--2079478'
 url5 = 'http://www.megastart.pl/rowery/turystyczne/silex/107-silex-400'
 url6 = 'https://www.romet.pl/Rower,ASPRE_2,10,773,774,15410,2020.html'
 
-
-cena1=parase(url1,"span","id","product-price-78")
-cena2=parase(url2,"div","class","a-price")
-cena3=parase(url3,"span","class","price")
-cena4=parase(url4,"span","class","base-price")
-cena5=parase(url5,"span","class","price")
+cena1 = parase(url1, "span", "id", "product-price-78")
+cena2 = parase(url2, "div", "class", "a-price")
+cena3 = parase(url3, "span", "class", "price")
+cena4 = parase(url4, "span", "class", "base-price")
+cena5 = parase(url5, "span", "class", "price")
 # cena6= parase(url6,"span","class","price")
 
-dane=[
+dane = [
     {"price": cena1, "url": url1},
     {"price": cena2, "url": url2},
     {"price": cena3, "url": url3},
