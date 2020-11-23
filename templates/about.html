@@ -4,7 +4,7 @@
     <h1>Alert Cenowy</h1>
     <ul>
        {% for cont in content -%}
-        <li>URL: {{ cont.url }} ; Cena: {{ cont.price }}</li>
+        <li>URL: <a href={{ cont.url }}>{{ cont.url }}</a> ; Cena: {{ cont.price }}</li>
         {% endfor %}
     </ul>
 {% endblock %}
