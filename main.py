@@ -4,10 +4,12 @@ import re
 import yagmail
 import os
 from template import make_template
+import pandas as pd
 
 email = os.environ.get('EMAIL_USER2')
 password = os.environ.get("EMAIL_PASSWORD2")
 
+print(email,password)
 
 def send_email(body):
     receiver = 'jablonski.norbert@gmail.com'
@@ -67,4 +69,6 @@ dane = [
     {"price": cena5, "url": url5},
 ]
 
-prepare_mail(dane)
+df = pd.DataFrame(dane, columns=['url','price'])
+prepare_mail(df.to_html())
+print(df)

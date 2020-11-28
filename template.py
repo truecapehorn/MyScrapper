@@ -9,7 +9,7 @@ def make_template(content):
     env.rstrip_blocks = True
     template = env.get_template('about.html')
     output = template.render(content=content)
-    print(output)
+    #print(output)
     return output
 
 if __name__ == '__main__':
