@@ -6,10 +6,16 @@ import os
 from template import make_template
 import pandas as pd
 
+
+pd.set_option('display.width', 1000)
+pd.set_option('colheader_justify', 'center')
+
 email = os.environ.get('EMAIL_USER2')
 password = os.environ.get("EMAIL_PASSWORD2")
 
-print(email,password)
+if email==None or password ==None:
+    print(f"email:{email}; password:{password}")
+    exit(0)
 
 def send_email(body):
     receiver = 'jablonski.norbert@gmail.com'
@@ -23,7 +29,7 @@ def send_email(body):
 
 def prepare_mail(prices):
     body = make_template(prices)
-    send_email(body)
+    return body
 
 
 def price_preparation(price):
@@ -45,6 +51,12 @@ def parase(url, container, selectors, selec_name):
 
     except Exception as e:
         print(url, e)
+
+def write_to_file(content):
+    import sys
+
+    with open('mail.html', 'w') as f:
+        print(content, file=f)
 
 
 url1 = 'https://cumulus.equipment/pl_pl/spiwory/quilty-komfortery.html'
@@ -70,5 +82,7 @@ dane = [
 ]
 
 df = pd.DataFrame(dane, columns=['url','price'])
-prepare_mail(df.to_html())
+body=prepare_mail(df.to_html(classes='mystyle'))
+write_to_file(body)
+send_email(body)
 print(df)
