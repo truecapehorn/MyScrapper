@@ -4,16 +4,16 @@ import os
 from template import make_template
 import pandas as pd
 
-
 pd.set_option('display.width', None)
 pd.set_option('colheader_justify', 'center')
 
 email = os.environ.get('EMAIL_USER2')
 password = os.environ.get("EMAIL_PASSWORD2")
 
-if email==None or password ==None:
+if email == None or password == None:
     print(f"email:{email}; password:{password}")
     exit(0)
+
 
 def send_email(body):
     receiver = 'jablonski.norbert@gmail.com'
@@ -30,17 +30,13 @@ def prepare_mail(prices):
     return body
 
 
-
 def write_to_file(content):
-    import sys
-
     with open('mail.html', 'w') as f:
         print(content, file=f)
 
 
-
-df = pd.DataFrame(dane, columns=['name','url','price','currency'])
-body=prepare_mail(df.to_html(classes='mystyle'))
+df = pd.DataFrame(dane, columns=['date', 'name', 'url', 'price', 'currency'])
+body = prepare_mail(df.to_html(classes='mystyle'))
 write_to_file(body)
 send_email(body)
 print(df)

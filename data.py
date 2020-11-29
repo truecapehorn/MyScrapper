@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import re
 import json
-
+import pendulum
 
 
 def parase(url, container, selectors, selec_name):
@@ -26,16 +26,15 @@ def price_preparation(price):
     return float(price_number)
 
 
-
 with open('dane.json') as f:
     data = json.load(f)
 dane = []
+now = pendulum.now().format('DD-MM-YYYY', locale='pl')
+
 for k, v in data.items():
     cena = parase(v['url'], v['container'], v['selectors'], v['selec_name'])
-    dane.append({"name": k, "price": cena, "url": v['url'], "currency":v['currency']})
+    dane.append({"name": k, "price": cena, "url": v['url'], "currency": v['currency'], "date": now})
 
 if __name__ == "__main__":
-
-
-    print(len(dane))
+    print(now, len(dane))
     print(dane)

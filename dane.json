@@ -47,6 +47,13 @@
     "selectors": "class",
     "selec_name": "price",
     "currency": "PLN"
+  },
+    "stuptuty": {
+    "url": "https://8a.pl/stuptuty-biegowe-inov-8-all-terrain-gaiter-black",
+    "container": "span",
+    "selectors": "class",
+    "selec_name": "price",
+    "currency": "PLN"
   }
 }
 
