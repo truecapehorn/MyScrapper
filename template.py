@@ -13,5 +13,6 @@ def make_template(content):
     return output
 
 if __name__ == '__main__':
+
     make_template({"price": 1223.45, "url": "www.test.pl"},)
 
