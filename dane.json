@@ -1,0 +1,52 @@
+{
+  "quilt": {
+    "url": "https://cumulus.equipment/pl_pl/spiwory/quilty-komfortery.html",
+    "container": "span",
+    "selectors": "id",
+    "selec_name": "product-price-78",
+    "currency": "PLN"
+  },
+  "esker": {
+    "url": "https://kross.eu/pl/rowery/szosowe/gravel/esker-4-0-zielony-czarny-polysk",
+    "container": "div",
+    "selectors": "class",
+    "selec_name": "a-price",
+    "currency": "PLN"
+  },
+  "selex400_1": {
+    "url": "https://www.merida-bikes.com/pl-pl/bike/667/silex-400",
+    "container": "span",
+    "selectors": "class",
+    "selec_name": "price",
+    "currency": "PLN"
+  },
+  "silex400_2": {
+    "url": "https://rower.com.pl/merida-silex-400--2079478",
+    "container": "span",
+    "selectors": "class",
+    "selec_name": "base-price",
+    "currency": "PLN"
+  },
+  "silex400_3": {
+    "url": "http://www.megastart.pl/rowery/turystyczne/silex/107-silex-400",
+    "container": "span",
+    "selectors": "class",
+    "selec_name": "price",
+    "currency": "PLN"
+  },
+  "worek5L": {
+    "url": "https://8a.pl/worek-wodoszczelny-exped-fold-drybag-ul-s",
+    "container": "span",
+    "selectors": "class",
+    "selec_name": "price",
+    "currency": "PLN"
+  },
+  "worek4L": {
+    "url": "https://www.skalnik.pl/worek-ultra-sil-nano-4l-lime-sea-to-summit-656955",
+    "container": "span",
+    "selectors": "class",
+    "selec_name": "price",
+    "currency": "PLN"
+  }
+}
+
