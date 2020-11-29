@@ -2,7 +2,8 @@ import requests
 from bs4 import BeautifulSoup
 import re
 import json
-import pendulum
+import datetime
+
 
 
 def parase(url, container, selectors, selec_name):
@@ -29,7 +30,8 @@ def price_preparation(price):
 with open('dane.json') as f:
     data = json.load(f)
 dane = []
-now = pendulum.now().format('DD-MM-YYYY', locale='pl')
+
+now = datetime.date.today()
 
 for k, v in data.items():
     cena = parase(v['url'], v['container'], v['selectors'], v['selec_name'])
