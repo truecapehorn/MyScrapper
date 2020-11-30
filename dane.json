@@ -54,6 +54,13 @@
     "selectors": "class",
     "selec_name": "price",
     "currency": "PLN"
+  },
+      "ponczo": {
+    "url": "https://www.decathlon.pl/p/ponczo-my-liwskie-glenarm-100/_/R-p-10652",
+    "container": "div",
+    "selectors": "class",
+    "selec_name": "dkt-price__cartridge",
+    "currency": "PLN"
   }
 }
 

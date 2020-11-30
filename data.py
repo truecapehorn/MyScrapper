@@ -5,7 +5,6 @@ import json
 import datetime
 
 
-
 def parase(url, container, selectors, selec_name):
     headers = {'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:70.0) Gecko/20100101 Firefox/70.0'}
 
@@ -39,4 +38,5 @@ for k, v in data.items():
 
 if __name__ == "__main__":
     print(now, len(dane))
-    print(dane)
+    for i in dane:
+        print(i)
