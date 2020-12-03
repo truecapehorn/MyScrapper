@@ -35,8 +35,12 @@ def write_to_file(content):
         print(content, file=f)
 
 
+old=pd.read_csv('dane.csv',index_col=0)
 df = pd.DataFrame(dane, columns=['date', 'name', 'url', 'price', 'currency'])
+df.set_index('date',inplace=True)
+df_export=pd.concat([old,df])
+df_export.to_csv('dane.csv')
 body = prepare_mail(df.to_html(classes='mystyle'))
 write_to_file(body)
 send_email(body)
-print(df)
+print(df_export.set_index('name'))

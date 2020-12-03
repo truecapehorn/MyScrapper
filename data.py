@@ -30,7 +30,9 @@ with open('dane.json') as f:
     data = json.load(f)
 dane = []
 
-now = datetime.date.today()
+# now = datetime.date.today()
+now = datetime.datetime.now()
+
 
 for k, v in data.items():
     cena = parase(v['url'], v['container'], v['selectors'], v['selec_name'])
