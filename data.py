@@ -26,7 +26,7 @@ def price_preparation(price):
     return float(price_number)
 
 
-with open('dane.json') as f:
+with open('data.json') as f:
     data = json.load(f)
 dane = []
 
