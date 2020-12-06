@@ -61,6 +61,13 @@
     "selectors": "class",
     "selec_name": "dkt-price__cartridge",
     "currency": "PLN"
+  },
+    "worek5L-2": {
+    "url": "https://8a.pl/lifeventure-ultralight-dry-bag-5-l",
+    "container": "span",
+    "selectors": "class",
+    "selec_name": "price",
+    "currency": "PLN"
   }
 }
 
