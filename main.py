@@ -3,7 +3,7 @@ import yagmail
 import os
 from template import make_template
 import datetime
-from pandas_operations import piv
+from pandas_operations import piv,df_produkty
 now = datetime.date.today() # data do pliku
 
 email = os.environ.get('EMAIL_USER2')
@@ -24,8 +24,8 @@ def send_email(body):
         print("Problem z wyslaniem meila: {}".format(e))
 
 
-def prepare_mail(prices):
-    body = make_template(prices)
+def prepare_mail(content):
+    body = make_template(content)
     write_to_file(body)
     return body
 
@@ -35,6 +35,6 @@ def write_to_file(content):
         print(content, file=f)
 
 
-body=prepare_mail(piv.to_html(classes='mystyle'))
+body=prepare_mail([piv.to_html(classes='mystyle'), df_produkty.to_html(classes="mystyle")])
 send_email(body)
 print(piv)
