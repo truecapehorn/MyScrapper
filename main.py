@@ -29,6 +29,7 @@ def send_email(body):
 def write_to_file(content):
     with open('mail.html', 'w') as f:
         print(content, file=f)
+    print("Mail zapisany")
 
 
 def prepare_mail(content):
