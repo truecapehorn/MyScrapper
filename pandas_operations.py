@@ -94,10 +94,12 @@ df_all
 # Produktuy
 
 
-# In[13]:
+# In[32]:
 
 
 df_produkty=df_all[['name','url']].drop_duplicates()
+# df_produkty.set_index('name',inplace=True)
+df_produkty.reset_index(inplace=True,drop=True)
 df_produkty
 
 
@@ -135,16 +137,17 @@ df_diff=piv[filtr1]
 
 # # Ploty
 
-# In[19]:
+# In[22]:
 
 
-fig, axes = plt.subplots(piv.columns.size,1,figsize=(15,20),sharex=True)
+fig, axes = plt.subplots(int(np.ceil(piv.columns.size/2)),2,figsize=(15,20),sharex=True)
 fig.suptitle('Ceny', fontsize=22)
 fig.tight_layout()
 fig.subplots_adjust(top=0.95)
 for n,a in enumerate(axes.flat):
-    piv.iloc[:,n].plot(ax=a,kind='bar',grid=True)
-    a.set(xlabel=f'(Rok, Miesiąc, Dzien)', ylabel=f'Cena',title=f"{piv.columns[n]}")
+    if n<piv.columns.size:
+        piv.iloc[:,n].plot(ax=a,kind='bar',grid=True)
+        a.set(xlabel=f'(Rok, Miesiąc, Dzien)', ylabel=f'Cena',title=f"{piv.columns[n]}")
 
 plt.savefig('Fig/graph.png',transparent=False)
 # plt.show()
