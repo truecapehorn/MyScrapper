@@ -20,7 +20,7 @@ def send_email(body):
     try:
         yag = yagmail.SMTP(user=email, password=password)
         yag.send(to=receiver, subject="Alert cenowy", contents='mail.html',
-                 attachments=['Fig/graph.png', f"Dane/dane{now}.csv"])
+                 attachments=['Fig/graph.png',"Dane/all_data.csv"])
         print("Mail wysłany")
     except Exception as e:
         print("Problem z wyslaniem meila: {}".format(e))
