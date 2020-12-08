@@ -23,52 +23,29 @@ pd.set_option('display.max_rows', None)
 pd.set_option('colheader_justify', 'center')
 
 
-# In[3]:
+# In[28]:
 
 
 # import starych df
 data_files = sorted(glob('Dane/dane*.csv'))
 df_old=pd.concat((pd.read_csv(file) for file in data_files), ignore_index=True)
 df_old['date']=pd.to_datetime(df_old['date'])
+df_old.drop('Unnamed: 0',axis=1,inplace=True,errors='ignore')
 
 
-# In[4]:
-
-
-df_old.dtypes
-
-
-# In[5]:
-
-
-df_old
-
-
-# In[ ]:
-
-
-
-
-
-# In[6]:
+# In[29]:
 
 
 from data import dane
 
 
-# In[7]:
+# In[30]:
 
 
 df_new = pd.DataFrame(dane, columns=['date', 'name', 'url', 'price', 'currency'])
 
 
-# In[8]:
-
-
-df_new
-
-
-# In[9]:
+# In[31]:
 
 
 df_new.to_csv(f'Dane/dane{now}.csv')
@@ -76,25 +53,31 @@ df_new.to_csv(f'Dane/dane{now}.csv')
 
 # # Mardzin framow
 
-# In[10]:
+# In[32]:
 
 
 df_all=pd.concat([df_old, df_new], ignore_index=True)
 
 
-# In[11]:
+# In[33]:
+
+
+df_all.to_csv(f'Dane/all_data.csv')
+
+
+# In[34]:
 
 
 df_all
 
 
-# In[12]:
+# In[10]:
 
 
 # Produktuy
 
 
-# In[32]:
+# In[11]:
 
 
 df_produkty=df_all[['name','url']].drop_duplicates()
@@ -105,31 +88,31 @@ df_produkty
 
 # # Pivoty
 
-# In[14]:
+# In[12]:
 
 
 piv=df_all.pivot_table(index=(df_all.date.dt.year,df_all.date.dt.month,df_all.date.dt.day),columns='name',values='price',aggfunc=min)
 
 
-# In[15]:
+# In[13]:
 
 
 piv
 
 
-# In[16]:
+# In[14]:
 
 
 filtr1=piv.diff().ne(0).any(1)
 
 
-# In[17]:
+# In[15]:
 
 
 filtr2=piv.diff().any(1)
 
 
-# In[18]:
+# In[16]:
 
 
 df_diff=piv[filtr1]
@@ -137,7 +120,7 @@ df_diff=piv[filtr1]
 
 # # Ploty
 
-# In[22]:
+# In[17]:
 
 
 fig, axes = plt.subplots(int(np.ceil(piv.columns.size/2)),2,figsize=(15,20),sharex=True)
@@ -145,12 +128,18 @@ fig.suptitle('Ceny', fontsize=22)
 fig.tight_layout()
 fig.subplots_adjust(top=0.95)
 for n,a in enumerate(axes.flat):
-    if n<piv.columns.size:
+    if n < piv.columns.size:
         piv.iloc[:,n].plot(ax=a,kind='bar',grid=True)
         a.set(xlabel=f'(Rok, Miesiąc, Dzien)', ylabel=f'Cena',title=f"{piv.columns[n]}")
 
 plt.savefig('Fig/graph.png',transparent=False)
 # plt.show()
+
+
+# In[18]:
+
+
+# testy
 
 
 # In[ ]:
