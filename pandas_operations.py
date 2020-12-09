@@ -23,7 +23,7 @@ pd.set_option('display.max_rows', None)
 pd.set_option('colheader_justify', 'center')
 
 
-# In[28]:
+# In[3]:
 
 
 # import starych df
@@ -33,51 +33,45 @@ df_old['date']=pd.to_datetime(df_old['date'])
 df_old.drop('Unnamed: 0',axis=1,inplace=True,errors='ignore')
 
 
-# In[29]:
+# In[4]:
 
 
 from data import dane
 
 
-# In[30]:
+# In[5]:
 
 
 df_new = pd.DataFrame(dane, columns=['date', 'name', 'url', 'price', 'currency'])
 
 
-# In[31]:
+# In[6]:
 
 
-df_new.to_csv(f'Dane/dane{now}.csv')
+df_new.to_csv(f'Dane/dane{now}.csv',mode='a', header=False)
 
 
 # # Mardzin framow
 
-# In[32]:
+# In[7]:
 
 
 df_all=pd.concat([df_old, df_new], ignore_index=True)
 
 
-# In[33]:
+# In[8]:
 
 
 df_all.to_csv(f'Dane/all_data.csv')
 
 
-# In[34]:
-
-
-df_all
-
-
-# In[10]:
+# In[9]:
 
 
 # Produktuy
 
 
-# In[11]:
+# In[10]:
 
 
 df_produkty=df_all[['name','url']].drop_duplicates()
@@ -88,31 +82,31 @@ df_produkty
 
 # # Pivoty
 
-# In[12]:
+# In[11]:
 
 
 piv=df_all.pivot_table(index=(df_all.date.dt.year,df_all.date.dt.month,df_all.date.dt.day),columns='name',values='price',aggfunc=min)
 
 
-# In[13]:
+# In[12]:
 
 
 piv
 
 
-# In[14]:
+# In[13]:
 
 
 filtr1=piv.diff().ne(0).any(1)
 
 
-# In[15]:
+# In[14]:
 
 
 filtr2=piv.diff().any(1)
 
 
-# In[16]:
+# In[15]:
 
 
 df_diff=piv[filtr1]
@@ -120,7 +114,7 @@ df_diff=piv[filtr1]
 
 # # Ploty
 
-# In[17]:
+# In[16]:
 
 
 fig, axes = plt.subplots(int(np.ceil(piv.columns.size/2)),2,figsize=(15,20),sharex=True)
@@ -136,7 +130,7 @@ plt.savefig('Fig/graph.png',transparent=False)
 # plt.show()
 
 
-# In[18]:
+# In[17]:
 
 
 # testy
