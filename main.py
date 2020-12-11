@@ -6,13 +6,12 @@ import datetime
 from pandas_operations import piv, df_produkty
 
 now = datetime.date.today()  # data do pliku
-dtime = datetime.datetime.now()
 
 email = os.environ.get('EMAIL_USER2')
 password = os.environ.get("EMAIL_PASSWORD2")
 
 if email == None or password == None:
-    print(f"email:{email}; password:{password}; time: {dtime}")
+    print(f"email:{email}; password:{password}; time: {datetime.datetime.now()}")
     exit(0)
 
 
@@ -22,15 +21,15 @@ def send_email(body):
         yag = yagmail.SMTP(user=email, password=password)
         yag.send(to=receiver, subject="Alert cenowy", contents='mail.html',
                  attachments=['Fig/graph.png',"Dane/all_data.csv"])
-        print(f"Mail wysłany - {dtime}")
+        print(f"Mail wysłany - {datetime.datetime.now()}")
     except Exception as e:
-        print("{} Problem z wyslaniem meila: {}".format(dtime,e))
+        print("{} Problem z wyslaniem meila: {}".format(datetime.datetime.now(),e))
 
 
 def write_to_file(content):
     with open('mail.html', 'w') as f:
         print(content, file=f)
-    print(f"Mail zapisany - {dtime}")
+    print(f"Mail zapisany - {datetime.datetime.now()}")
 
 
 def prepare_mail(content):
