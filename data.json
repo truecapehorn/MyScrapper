@@ -82,7 +82,16 @@
     "selectors": "class",
     "selec_name": "price",
     "currency": "PLN"
+  },
+  "x-box x": {
+    "url": "https://www.x-kom.pl/p/577874-konsola-xbox-microsoft-xbox-series-x.html",
+    "container": "div",
+    "selectors": "class",
+    "selec_name": "u7xnnm-4",
+    "currency": "PLN"
   }
+
+
 
 }
 
