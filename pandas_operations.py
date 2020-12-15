@@ -48,7 +48,11 @@ df_new = pd.DataFrame(dane, columns=['date', 'name', 'url', 'price', 'currency']
 # In[6]:
 
 
-df_new.to_csv(f'Dane/dane{now}.csv',mode='a', header=False)
+if f'Dane/dane{now}.csv' in data_files:
+    df_new.to_csv(f'Dane/dane{now}.csv',mode='a', header=False)
+else:
+    df_new.to_csv(f'Dane/dane{now}.csv',mode='w', header=True)
+    
 
 
 # # Mardzin framow
@@ -68,10 +72,16 @@ df_all.to_csv(f'Dane/all_data.csv')
 # In[9]:
 
 
-# Produktuy
+df_all.head()
 
 
 # In[10]:
+
+
+# Produktuy
+
+
+# In[11]:
 
 
 df_produkty=df_all[['name','url']].drop_duplicates()
@@ -82,31 +92,31 @@ df_produkty
 
 # # Pivoty
 
-# In[11]:
+# In[12]:
 
 
 piv=df_all.pivot_table(index=(df_all.date.dt.year,df_all.date.dt.month,df_all.date.dt.day),columns='name',values='price',aggfunc=min)
 
 
-# In[12]:
-
-
-piv
-
-
 # In[13]:
 
 
-filtr1=piv.diff().ne(0).any(1)
+piv.tail()
 
 
 # In[14]:
 
 
-filtr2=piv.diff().any(1)
+filtr1=piv.diff().ne(0).any(1)
 
 
 # In[15]:
+
+
+filtr2=piv.diff().any(1)
+
+
+# In[16]:
 
 
 df_diff=piv[filtr1]
@@ -114,7 +124,7 @@ df_diff=piv[filtr1]
 
 # # Ploty
 
-# In[16]:
+# In[17]:
 
 
 fig, axes = plt.subplots(int(np.ceil(piv.columns.size/2)),2,figsize=(15,20),sharex=True)
@@ -130,7 +140,7 @@ plt.savefig('Fig/graph.png',transparent=False)
 # plt.show()
 
 
-# In[17]:
+# In[18]:
 
 
 # testy

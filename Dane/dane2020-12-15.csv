@@ -1,13 +1,53 @@
-0,2020-12-15 09:30:02.636535,quilt,https://cumulus.equipment/pl_pl/spiwory/quilty-komfortery.html,889.0,PLN
-1,2020-12-15 09:30:02.636535,esker,https://kross.eu/pl/rowery/szosowe/gravel/esker-4-0-zielony-czarny-polysk,4899.0,PLN
-2,2020-12-15 09:30:02.636535,selex400_1,https://www.merida-bikes.com/pl-pl/bike/667/silex-400,6699.0,PLN
-3,2020-12-15 09:30:02.636535,silex400_2,https://rower.com.pl/merida-silex-400--2079478,6499.0,PLN
-4,2020-12-15 09:30:02.636535,silex400_3,http://www.megastart.pl/rowery/turystyczne/silex/107-silex-400,6999.0,PLN
-5,2020-12-15 09:30:02.636535,worek5L,https://8a.pl/worek-wodoszczelny-exped-fold-drybag-ul-s,59.49,PLN
-6,2020-12-15 09:30:02.636535,worek4L,https://www.skalnik.pl/worek-ultra-sil-nano-4l-lime-sea-to-summit-656955,43.86,PLN
-7,2020-12-15 09:30:02.636535,stuptuty,https://8a.pl/stuptuty-biegowe-inov-8-all-terrain-gaiter-black,71.99,PLN
-8,2020-12-15 09:30:02.636535,ponczo,https://www.decathlon.pl/p/ponczo-my-liwskie-glenarm-100/_/R-p-10652,59.99,PLN
-9,2020-12-15 09:30:02.636535,worek5L-2,https://8a.pl/lifeventure-ultralight-dry-bag-5-l,47.39,PLN
-10,2020-12-15 09:30:02.636535,katadyn_1l,https://8a.pl/butelka-filtracyjna-katadyn-befree-1l,203.99,PLN
-11,2020-12-15 09:30:02.636535,stuptuty_gore,https://8a.pl/stuptuty-trekmates-glenmore-gtx-ankle-gaiter-black,114.79,PLN
-12,2020-12-15 09:30:02.636535,x-box x,https://www.x-kom.pl/p/577874-konsola-xbox-microsoft-xbox-series-x.html,2249.0,PLN
+,date,name,url,price,currency
+0,2020-12-15 19:49:39.563077,quilt,https://cumulus.equipment/pl_pl/spiwory/quilty-komfortery.html,889.0,PLN
+1,2020-12-15 19:49:39.563077,esker,https://kross.eu/pl/rowery/szosowe/gravel/esker-4-0-zielony-czarny-polysk,4899.0,PLN
+2,2020-12-15 19:49:39.563077,selex400_1,https://www.merida-bikes.com/pl-pl/bike/667/silex-400,6699.0,PLN
+3,2020-12-15 19:49:39.563077,silex400_2,https://rower.com.pl/merida-silex-400--2079478,6499.0,PLN
+4,2020-12-15 19:49:39.563077,silex400_3,http://www.megastart.pl/rowery/turystyczne/silex/107-silex-400,6999.0,PLN
+5,2020-12-15 19:49:39.563077,worek5L,https://8a.pl/worek-wodoszczelny-exped-fold-drybag-ul-s,59.49,PLN
+6,2020-12-15 19:49:39.563077,worek4L,https://www.skalnik.pl/worek-ultra-sil-nano-4l-lime-sea-to-summit-656955,43.86,PLN
+7,2020-12-15 19:49:39.563077,stuptuty,https://8a.pl/stuptuty-biegowe-inov-8-all-terrain-gaiter-black,71.99,PLN
+8,2020-12-15 19:49:39.563077,ponczo,https://www.decathlon.pl/p/ponczo-my-liwskie-glenarm-100/_/R-p-10652,59.99,PLN
+9,2020-12-15 19:49:39.563077,worek5L-2,https://8a.pl/lifeventure-ultralight-dry-bag-5-l,47.39,PLN
+10,2020-12-15 19:49:39.563077,katadyn_1l,https://8a.pl/butelka-filtracyjna-katadyn-befree-1l,203.99,PLN
+11,2020-12-15 19:49:39.563077,stuptuty_gore,https://8a.pl/stuptuty-trekmates-glenmore-gtx-ankle-gaiter-black,114.79,PLN
+12,2020-12-15 19:49:39.563077,x-box x,https://www.x-kom.pl/p/577874-konsola-xbox-microsoft-xbox-series-x.html,2249.0,PLN
+0,2020-12-15 19:50:06.990972,quilt,https://cumulus.equipment/pl_pl/spiwory/quilty-komfortery.html,889.0,PLN
+1,2020-12-15 19:50:06.990972,esker,https://kross.eu/pl/rowery/szosowe/gravel/esker-4-0-zielony-czarny-polysk,4899.0,PLN
+2,2020-12-15 19:50:06.990972,selex400_1,https://www.merida-bikes.com/pl-pl/bike/667/silex-400,6699.0,PLN
+3,2020-12-15 19:50:06.990972,silex400_2,https://rower.com.pl/merida-silex-400--2079478,6499.0,PLN
+4,2020-12-15 19:50:06.990972,silex400_3,http://www.megastart.pl/rowery/turystyczne/silex/107-silex-400,6999.0,PLN
+5,2020-12-15 19:50:06.990972,worek5L,https://8a.pl/worek-wodoszczelny-exped-fold-drybag-ul-s,59.49,PLN
+6,2020-12-15 19:50:06.990972,worek4L,https://www.skalnik.pl/worek-ultra-sil-nano-4l-lime-sea-to-summit-656955,43.86,PLN
+7,2020-12-15 19:50:06.990972,stuptuty,https://8a.pl/stuptuty-biegowe-inov-8-all-terrain-gaiter-black,71.99,PLN
+8,2020-12-15 19:50:06.990972,ponczo,https://www.decathlon.pl/p/ponczo-my-liwskie-glenarm-100/_/R-p-10652,59.99,PLN
+9,2020-12-15 19:50:06.990972,worek5L-2,https://8a.pl/lifeventure-ultralight-dry-bag-5-l,47.39,PLN
+10,2020-12-15 19:50:06.990972,katadyn_1l,https://8a.pl/butelka-filtracyjna-katadyn-befree-1l,203.99,PLN
+11,2020-12-15 19:50:06.990972,stuptuty_gore,https://8a.pl/stuptuty-trekmates-glenmore-gtx-ankle-gaiter-black,114.79,PLN
+12,2020-12-15 19:50:06.990972,x-box x,https://www.x-kom.pl/p/577874-konsola-xbox-microsoft-xbox-series-x.html,2249.0,PLN
+0,2020-12-15 19:50:39.503382,quilt,https://cumulus.equipment/pl_pl/spiwory/quilty-komfortery.html,889.0,PLN
+1,2020-12-15 19:50:39.503382,esker,https://kross.eu/pl/rowery/szosowe/gravel/esker-4-0-zielony-czarny-polysk,4899.0,PLN
+2,2020-12-15 19:50:39.503382,selex400_1,https://www.merida-bikes.com/pl-pl/bike/667/silex-400,6699.0,PLN
+3,2020-12-15 19:50:39.503382,silex400_2,https://rower.com.pl/merida-silex-400--2079478,6499.0,PLN
+4,2020-12-15 19:50:39.503382,silex400_3,http://www.megastart.pl/rowery/turystyczne/silex/107-silex-400,6999.0,PLN
+5,2020-12-15 19:50:39.503382,worek5L,https://8a.pl/worek-wodoszczelny-exped-fold-drybag-ul-s,59.49,PLN
+6,2020-12-15 19:50:39.503382,worek4L,https://www.skalnik.pl/worek-ultra-sil-nano-4l-lime-sea-to-summit-656955,43.86,PLN
+7,2020-12-15 19:50:39.503382,stuptuty,https://8a.pl/stuptuty-biegowe-inov-8-all-terrain-gaiter-black,71.99,PLN
+8,2020-12-15 19:50:39.503382,ponczo,https://www.decathlon.pl/p/ponczo-my-liwskie-glenarm-100/_/R-p-10652,59.99,PLN
+9,2020-12-15 19:50:39.503382,worek5L-2,https://8a.pl/lifeventure-ultralight-dry-bag-5-l,47.39,PLN
+10,2020-12-15 19:50:39.503382,katadyn_1l,https://8a.pl/butelka-filtracyjna-katadyn-befree-1l,203.99,PLN
+11,2020-12-15 19:50:39.503382,stuptuty_gore,https://8a.pl/stuptuty-trekmates-glenmore-gtx-ankle-gaiter-black,114.79,PLN
+12,2020-12-15 19:50:39.503382,x-box x,https://www.x-kom.pl/p/577874-konsola-xbox-microsoft-xbox-series-x.html,2249.0,PLN
+0,2020-12-15 19:53:08.283711,quilt,https://cumulus.equipment/pl_pl/spiwory/quilty-komfortery.html,889.0,PLN
+1,2020-12-15 19:53:08.283711,esker,https://kross.eu/pl/rowery/szosowe/gravel/esker-4-0-zielony-czarny-polysk,4899.0,PLN
+2,2020-12-15 19:53:08.283711,selex400_1,https://www.merida-bikes.com/pl-pl/bike/667/silex-400,6699.0,PLN
+3,2020-12-15 19:53:08.283711,silex400_2,https://rower.com.pl/merida-silex-400--2079478,6499.0,PLN
+4,2020-12-15 19:53:08.283711,silex400_3,http://www.megastart.pl/rowery/turystyczne/silex/107-silex-400,6999.0,PLN
+5,2020-12-15 19:53:08.283711,worek5L,https://8a.pl/worek-wodoszczelny-exped-fold-drybag-ul-s,59.49,PLN
+6,2020-12-15 19:53:08.283711,worek4L,https://www.skalnik.pl/worek-ultra-sil-nano-4l-lime-sea-to-summit-656955,43.86,PLN
+7,2020-12-15 19:53:08.283711,stuptuty,https://8a.pl/stuptuty-biegowe-inov-8-all-terrain-gaiter-black,71.99,PLN
+8,2020-12-15 19:53:08.283711,ponczo,https://www.decathlon.pl/p/ponczo-my-liwskie-glenarm-100/_/R-p-10652,59.99,PLN
+9,2020-12-15 19:53:08.283711,worek5L-2,https://8a.pl/lifeventure-ultralight-dry-bag-5-l,47.39,PLN
+10,2020-12-15 19:53:08.283711,katadyn_1l,https://8a.pl/butelka-filtracyjna-katadyn-befree-1l,203.99,PLN
+11,2020-12-15 19:53:08.283711,stuptuty_gore,https://8a.pl/stuptuty-trekmates-glenmore-gtx-ankle-gaiter-black,114.79,PLN
+12,2020-12-15 19:53:08.283711,x-box x,https://www.x-kom.pl/p/577874-konsola-xbox-microsoft-xbox-series-x.html,2249.0,PLN
