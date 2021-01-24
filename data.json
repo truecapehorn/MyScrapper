@@ -89,8 +89,14 @@
     "selectors": "class",
     "selec_name": "u7xnnm-4",
     "currency": "PLN"
+  },
+  "spodnie deszczowe": {
+    "url": "https://www.decathlon.pl/p/spodnie-przeciwdeszczowe-do-biegania-w-terenie-m-skie/_/R-p-121366",
+    "container": "div",
+    "selectors": "class",
+    "selec_name": "dkt-price__cartridge",
+    "currency": "PLN"
   }
-
 
 
 }
