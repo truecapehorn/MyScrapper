@@ -96,14 +96,20 @@
     "selectors": "class",
     "selec_name": "dkt-price__cartridge",
     "currency": "PLN"
+
   },
-  "buty sportiva gtx": {
-    "url": "https://8a.pl/buty-la-sportiva-tx4-gtx-opal-jasmine-green",
-    "container": "span",
+  "buty sportiva gtx": {    "container": "span",
     "selectors": "class",
     "selec_name": "price",
     "currency": "PLN"
+
+    "url": "https://8a.pl/buty-la-sportiva-tx4-gtx-opal-jasmine-green"
+    "container": "div",
+    "selectors": "class",
+    "selec_name": "dkt-price__cartridge",
+    "currency": "PLN"
   }
+
 
 
 }
