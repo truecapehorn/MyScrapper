@@ -103,6 +103,13 @@
     "selectors": "class",
     "selec_name": "price",
     "currency": "PLN"
+  },
+  "pokrowiec na butelke": {
+    "url": "https://8a.pl/pokrowiec-na-butelke-kohla-ready-caviar-sulphur-spring",
+    "container": "span",
+    "selectors": "class",
+    "selec_name": "price",
+    "currency": "PLN"
   }
 
 
