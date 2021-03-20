@@ -110,8 +110,14 @@
     "selectors": "class",
     "selec_name": "price",
     "currency": "PLN"
+  },
+  "kalesony": {
+    "url": "https://www.decathlon.pl/p/legginsy-trekkingowe-trek-500-merino-m-skie/_/R-p-301655",
+    "container": "div",
+    "selectors": "class",
+    "selec_name": "dkt-price__cartridge",
+    "currency": "PLN"
   }
-
 
 }
 
