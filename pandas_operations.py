@@ -133,7 +133,7 @@ fig.tight_layout()
 fig.subplots_adjust(top=0.95)
 for n,a in enumerate(axes.flat):
     if n < piv.columns.size:
-        piv.iloc[:,n].plot(ax=a,kind='bar',grid=True)
+        piv.iloc[:,n].plot(ax=a,kind='line',grid=True)
         a.set(xlabel=f'(Rok, Miesiąc, Dzien)', ylabel=f'Cena',title=f"{piv.columns[n]}")
 
 plt.savefig('Fig/graph.png',transparent=False)
